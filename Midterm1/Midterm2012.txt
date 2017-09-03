@@ -1,0 +1,64 @@
+Ex 1a
+
+HELP
+
+Ex 1b
+
+Assumming n is odd (n=2^k -1)
+i = 0
+j = n
+missingNumber(A, range[i, j])
+    x = get median of range
+    if(x not in A)
+        return x
+    partition of A, in elements smaller than x into B and bigger and equal than into C
+    if(size(b)<x+1))
+        return missingNumber(B, [i,x])
+    else
+        return missingNumber(C, [x+1,j])
+
+Ex 1c
+
+T(n) = T(n/2) + O(n)
+By master method the complexity of this recursion is O(n) which is smaller than the description's complexity.
+This because we don't need 2T(n/2). If we just use the smaller partition we have no reason to use the other one.
+
+Ex 2a
+
+for i = 0; i < n; i++   (n+1)
+    j = i               (n)
+    while j != 0        (from {i=0} to {n-1} sum{lg n}+1)
+        j = j/2         (from {i=0} to {n-1} sum{lg n})
+
+Giving f(n) = (n+1) + n + (n(lg(n)+1)) + (nlg(n))
+
+Ex 2b
+
+Assumming the cost of printing is constant
+T(n) = 2T(n/2) + O(1)
+                    1
+            /               \
+           n/2             n/2
+        /       \       /       \
+       n/4     n/4     n/4     n/4
+
+The total nodes of a tree are n-1, meaning the print will be executen n-1 times 
+(It would be 2n-1 if the condition for the function was >=1)
+
+Ex 3a
+
+Store sum of coefficients in an array, where the index of the element is the resultant exponent of the multiplication
+
+finalArray[M+N+1] = {0}                                                             (N+M+1)
+elementA = P1.first                                                                 (1)
+for n = 0; n < N; n++                                                               (N+1)
+    elementB = P2.first                                                             (N)
+    for m = 0; m < M; m++                                                           (N(M+1)
+        finalArray[elementA.exp+elementB.exp] += elementA.coef*elementB.coef        (NM)
+        elementB = elementB.next                                                    (NM)
+    elementA = elementA.next                                                        (N)
+
+Ex 3b
+
+Check complexity count
+COmplexity O(NM)

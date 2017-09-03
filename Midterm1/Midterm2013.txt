@@ -1,0 +1,111 @@
+Ex 1a
+
+T(n) = 9T(n/3) + O(n²)
+Using master method
+Case 2 (d=logb(a)) because 2 = log3(9)
+Complexity of recursion O(n^d log(n)) = O(n²log(n))
+
+Ex 1b
+
+T(n) = T(an) + T((1-a)n) + O(n)
+                        n                                   n
+            /                   \
+            an                  (1-a)n                      n
+        /       \           /       \
+        a²n     a(1-a)n    (1-a)an  (1-a)(1-a)n             n
+
+height = log(n)/log(1/(1-a)) If the right subtree is the longest (Given a < 1-a)
+height = log(n)/log(1/a)) If the left subtree is the longest (Given a > 1-a)
+
+
+Both cases give the guess O(nlog(n))
+
+Proof:
+
+Using master method considering left subtree is the longest
+Case 2 (d=logb(a)) because 1 = log(1)/log(1/a) for some a
+Giving O(n^d log(n)) = O(nlog(n))
+
+Using master method considering right subtree is the longest
+Case 2 (d=logb(a)) because 1 = log(1)/log(1/(1-a)) for some a
+Giving O(n^d log(n)) = O(nlog(n))
+
+Both cases yield the same complexity. Proving O(nlog(n))
+
+Ex 1c
+
+Considering 1<=i<j<=n
+There are two possibilities for any two given numbers. Either A[i]>A[j] or A[i]<A[j]. 
+If Xij is the probability that A[i]>A[j], then Xij=1/2
+
+Now we need to iterate trough every pair of numbers and get the probability for all pairs
+X = from{i=1} to{n-1} sum(from{j=i+1} to{n} sum(Xij))
+
+Now we need to get the expected value of inversions needed
+
+E[x] = E[from{i=1} to{n-1} sum(from{j=i+1} to{n} sum(Xij))]
+
+E[x] = from{i=1} to{n-1} sum(from{j=i+1} to{n} sum(E[Xij]))
+
+E[x] = from{i=1} to{n-1} sum(from{j=i+1} to{n} sum(1/2)) Because E[Xij] = 1/2
+
+E[x] = 1/2 (from{i=1} to{n-1} sum(n-i))
+
+E[x] = 1/2 (from{i=1} to{n-1} sum(n) - from{i=1} to{n-1} sum(i))
+
+E[x] = 1/2 (1/2 n(n-1))
+
+E[X] = n(n-1)/4
+
+Ex 2
+
+Use a heap to store the first remaining element of the k lists. We need a heap of k size. 
+The heap has an insert(v, i, k). Stores the value, the index and the list. It has a deleteMin, that returns the three values.
+
+for i=0; i < k; i++                                 (k+1)
+    insert(lists[i][0], 0, i)                       (klog(k))
+c = 0                                               (1)
+while !heap.empty                                   (n+1)
+    v, i, k = heap.deleteMin                        (nlog(k))
+    result[c++] = v                                 (n)
+    i++                                             (n)
+    if i < lists[k].lenght                          (n)
+        heap.insert(lists[k][i], i, k)              (nlog(k))
+
+Complexity is O(k+1 +klog(k) +1 +n+1 +nlog(k) +n +n +n +nlog(k)). Because n>k, then O(nlog(k))
+
+Ex 3
+
+Get median of medians this takes O(n)
+Min Heapify the array, but instead of comparing the value to make the heapify, we use |(value-median)|. This takes O(n)
+Finaly we remove the first k heaps, taking klog(n). If k is a constant, this takes O(log(n))
+
+Thus giving O(n)
+
+Ex 4
+
+Expected number of probes when fail
+pf = 1/(1-a)
+
+Expected number of probes when success
+ps = ln(1/(1-a))/a
+
+pf = 2ps
+1/(1-a) = ln(1/(1-a))/a
+a = 0.7153
+
+Ex 5
+
+remove (key, root)
+    if root == null || key == null
+        return null
+    x = root
+    while x.key != keyToRemove
+        if x.key > keyToRemove 
+            x = x.left
+        elif x.key < keyToRemove
+            x = x.right
+    toRemove = x
+    x.key = toRemove.succ.key
+    remove(toRemove.succ.key, toRemove)
+    x.right = toRemove.right

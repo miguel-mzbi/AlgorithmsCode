@@ -1,0 +1,65 @@
+Ex 1a
+
+T(n) = 9T(n/3) + O(n²)
+
+The height h of the tree is log3(n)
+
+Number of leaves (Bottom) = 9^h
+The work at the last levels (height) = 9^h T(1)
+
+The work at all levels (From 0 to h-1) is n²*(1+ 9/3+ 9²/3² + 9³/3³ + ... + 9^i/3^i).
+cn²(from(k=0) to(h -1)) sufrom {i=1} to {}m(9/3)^k) This would give an upper bound of O(n²)
+
+->T(n) = 9^h T(1)   +   O(n²)
+        = 9^log3(n)+T(1) + O(n²)
+        = n^log3(9)+T(1) + O(n²)
+        = O(n²)
+
+Ex 1b
+
+HELP
+
+Ex 1c
+
+for x-1 to n        (n)
+    y = x           (n-1)
+    while (y>1)     (n lg(n) +1)
+        y = y/2     (n lg(n))
+
+BigTheta(n²). The algorithm will take no longer than n lg(n) and more than n lg(n)
+
+Ex 2
+
+Because the best case for quicksort is the case where the pivot is exaclty in the center of the array, so the partitions are divided in half.
+We would have a Recursion like:
+T(n) = 2T(n/2) + cn
+Using the master theorem, this recurrance would fall in the 2nd case because 1=log2(2). Giving BigTheta(n log(n)) as complexity.
+
+Ex 3
+
+HELP
+
+Ex 4
+
+HELP
+
+Ex 5
+
+remove (key, root)
+    if root == null || key == null
+        return null
+    x = root
+    while x.key != keyToRemove
+        if x.key > keyToRemove 
+            x = x.left
+        elif x.key < keyToRemove
+            x = x.right
+    toRemove = x
+    x.key = toRemove.succ.key
+    remove(toRemove.succ.key, toRemove)
+    x.right = toRemove.right
+
+
+
+
+
