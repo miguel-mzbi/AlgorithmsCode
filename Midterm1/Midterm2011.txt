@@ -26,7 +26,7 @@ for x-1 to n        (n)
     while (y>1)     (n lg(n) +1)
         y = y/2     (n lg(n))
 
-BigTheta(n²). The algorithm will take no longer than n lg(n) and more than n lg(n)
+BigTheta(n lg(n)). The algorithm will take no longer than n lg(n) and more than n lg(n)
 
 Ex 2
 

@@ -21,7 +21,7 @@ Ex 1c
 
 T(n) = T(n/2) + O(n)
 By master method the complexity of this recursion is O(n) which is smaller than the description's complexity.
-This because we don't need 2T(n/2). If we just use the smaller partition we have no reason to use the other one.
+This because we don't need 2T(n/2). If we just use the smaller partition we have no reason to use the other one, so we aren't.
 
 Ex 2a
 
@@ -61,4 +61,4 @@ for n = 0; n < N; n++                                                           
 Ex 3b
 
 Check complexity count
-COmplexity O(NM)
+Complexity O(NM)

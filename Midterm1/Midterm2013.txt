@@ -84,6 +84,7 @@ Thus giving O(n)
 
 Ex 4
 
+a = n/m
 Expected number of probes when fail
 pf = 1/(1-a)
 
@@ -92,6 +93,7 @@ ps = ln(1/(1-a))/a
 
 pf = 2ps
 1/(1-a) = ln(1/(1-a))/a
+
 a = 0.7153
 
 Ex 5
