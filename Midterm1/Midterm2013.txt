@@ -111,3 +111,5 @@ remove (key, root)
     x.key = toRemove.succ.key
     remove(toRemove.succ.key, toRemove)
     x.right = toRemove.right
+
+Because the next recursion starts from the node removed, at most, the full algorithm fould go trough h, giving O(h)

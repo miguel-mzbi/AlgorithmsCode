@@ -37,7 +37,31 @@ Using the master theorem, this recurrance would fall in the 2nd case because 1=l
 
 Ex 3
 
-IN DEVELOPMENT
+minMax(A)
+    if A.lenght == 1
+        min = A[0]
+        max = A[0]
+        return [min, max]
+    
+    split array in two equal parts, A1 and A2
+    min1, max1 = minMax(A1)
+    min2, max2 = minMax(A2)
+
+    if min1 <= min2
+        min = min1
+    else
+        min = min2
+
+    if max1 >= max2
+        max = max1
+    else
+        max = max2
+
+    return [min, max]
+
+We need n/2 comparisons to make MIN and MAX fully disjoint sets.
+After that, MIN and MAX are each of size n/2. We would need n/2 comparisons for each set to find the global max and global min.
+Giving at most 3n/2 comparisons.
 
 Ex 4
 
