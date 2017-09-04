@@ -37,13 +37,17 @@ Using the master theorem, this recurrance would fall in the 2nd case because 1=l
 
 Ex 3
 
-HELP
+IN DEVELOPMENT
 
 Ex 4
 
 HELP
 
 Ex 5
+
+HELP
+
+Ex 6
 
 remove (key, root)
     if root == null || key == null
@@ -60,5 +64,3 @@ remove (key, root)
     x.right = toRemove.right
 
 Because the next recursion starts from the node removed, at most, the full algorithm fould go trough h, giving O(h)
-
-
