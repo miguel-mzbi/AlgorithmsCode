@@ -1,0 +1,33 @@
+Ex 1
+
+HELP
+
+Ex 2
+
+Iterative method - O(y * (mn))
+
+            powerIterative(x, y)
+O(1)            if (y == 0)                 
+O(1)                return 1
+O(1)            result = x
+O(y)            for i = 1; i < y; i++
+O((y-1)(mn))        result = result * x
+O(1)            return result
+
+Recursive method - O(log(y) * (mn) )
+
+powerRecursive(x, y)
+    if (y == 0)
+        return 1
+    elif (y == 1)
+        return x
+    elif (y % 2 == 0)
+        recursiveCall = powerRecursive(x, y/2)
+        return recursiveCall*recursiveCall
+    elif (y % 2 == 1)
+        return powerRecursive(x, y-1) * x
+
+T(y) = T(y/2) + O(mn)
+
+Because we can save us a recursion, by simply multiplying the result of the previous recursion, we don't nee 2T(y/2). 
+The recursion is faster.
