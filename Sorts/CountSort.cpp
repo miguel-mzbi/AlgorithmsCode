@@ -74,8 +74,8 @@ void bestCase(int n, int k) {
 }
 
 int main(){
-    int n = 1000000;
-    int k = 9999;
+    int n = 10000;
+    int k = 100;
 
     worstCase(n, k);
     averageCase(n, k);  

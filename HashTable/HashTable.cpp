@@ -324,6 +324,7 @@ int HashTable::deleteMultiplication(int key){
 }
 
 void matrix(int m, int n) {
+    cout << endl;
     cout << "Matrix Method UNIFORM" << endl;
     HashTable matrixHT(m);
 
@@ -447,8 +448,8 @@ void multiplication(int m, int n) {
 }
 
 int main(){
-    int m = 1000;
-    int n = 50;
+    int m = 100;
+    int n = 100;
 
     division(m, n);
     multiplication(m, n);

@@ -87,7 +87,9 @@ void bestCase(int n) {
 }
 
 int main(){
-    int test_size = 1000;
+    int test_size ;
+    cout << "n= ";
+    cin >> test_size;
     
     worstCase(test_size);
     averageCase(test_size);  

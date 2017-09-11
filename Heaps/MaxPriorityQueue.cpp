@@ -136,7 +136,6 @@ void PriorityQueue::maxHeapify(int i) {
 
 void worstCase(int n) {
     PriorityQueue pq(n);
-    uniform_int_distribution<> dis(0, n);
     
     start = clock();
     for(int i = 0; i < n; i++){
@@ -172,7 +171,6 @@ void averageCase(int n) {
 
 void bestCase(int n) {
     PriorityQueue pq(n);
-    uniform_int_distribution<> dis(0, n);
     
     start = clock();
     for(int i = n; i > 0; i--){
@@ -188,7 +186,10 @@ void bestCase(int n) {
 }
 
 int main() {
-    worstCase(1000);
-    averageCase(1000);
-    bestCase(1000);
+    cout << "n = ";
+    int n;
+    cin >> n;
+    worstCase(n);
+    averageCase(n);
+    bestCase(n);
 }
