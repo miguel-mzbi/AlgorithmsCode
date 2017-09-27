@@ -1917,6 +1917,9 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
+\begin_inset Formula $\sum_{subSize=1}^{n}\sum_{i=1}^{n-subSize}1=\sum_{subSize=1}^{n}(n-subSize+1)$
+\end_inset
+
 
 \end_layout
 
