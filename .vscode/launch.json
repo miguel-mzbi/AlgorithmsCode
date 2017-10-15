@@ -5,7 +5,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/Dynamic/run",
+            "program": "${workspaceRoot}/Tree/run",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",

@@ -1,0 +1,49 @@
+
+1)
+    a.- The black-height can only be reduced by maximun 1 in either one of two cases:
+        1.- The node to remove is the root, so we just reduce 1 in the counter. The BH property is mantained as every path to nay leaf is now reduced by 1.
+        2.- The double black reaches the root, so in that case, the same rule as above aplies after removing completely the double black: Just reduce the counter by 1.
+        The rest of the cases are irelevant, as involves recoloring or any kind of rotations, but if the double black doesn't reach the root, BH is mantained.
+
+        deletion( int key, Node root) {
+            if(root != NULL) {
+                if(root->key == key) {
+                    T.bh -= 1
+                    //continue deletion
+                }
+                // ...
+                fixDeletion(Node)
+            }
+        }
+
+        fixDeletion(Node toFix) {
+            // ...
+            if( toFix == T.root && toFix is doubleBlack) {
+                T.bh -= 1
+                // ...
+            }
+        }
+
+    b.- T.bh stores de black height
+    search(int key, Node temp) {
+        blackCount = -1
+        while(root != NULL) {
+            if(temp->color == BLACK) {
+                blackCount++
+            }
+            cout << "This node has a BH of: " << T.bh - blackCount
+            if(key < temp->key) {
+                temp = temp->left
+            }
+            else if(key > temp->key) {
+                temp = temp->right
+            }
+            else {
+                return p->value
+            }
+        }
+        else {
+            return NULL
+        }
+    }
+    

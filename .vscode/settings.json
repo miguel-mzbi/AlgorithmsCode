@@ -12,6 +12,17 @@
         "string": "cpp",
         "iostream": "cpp",
         "iosfwd": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "cstdlib": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "fstream": "cpp",
+        "functional": "cpp",
+        "future": "cpp",
+        "shared_mutex": "cpp",
+        "sstream": "cpp",
+        "thread": "cpp",
+        "tuple": "cpp",
+        "valarray": "cpp"
     }
 }
