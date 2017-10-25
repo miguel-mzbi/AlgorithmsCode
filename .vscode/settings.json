@@ -23,6 +23,7 @@
         "sstream": "cpp",
         "thread": "cpp",
         "tuple": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "queue": "cpp"
     }
 }

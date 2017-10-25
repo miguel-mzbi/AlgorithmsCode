@@ -46,4 +46,8 @@
             return NULL
         }
     }
+
+2)
+    a.- If we define findCheap(k), given that 1<=k<=n, 
+
     

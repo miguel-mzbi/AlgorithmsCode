@@ -279,7 +279,7 @@ void RBTree::fixViolationRemove(Node *) {
 void generateUniformArray(int *a, int n){
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> dis(1,1000);
+    uniform_int_distribution<> dis(1,100);
     for(int i = 0; i < n; i++){
         a[i] = dis(gen);
     }
