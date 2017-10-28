@@ -1,0 +1,1234 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+HW4
+\end_layout
+
+\begin_layout Author
+Miguel A.
+ Montoya Z.
+ (A01226045)
+\end_layout
+
+\begin_layout Enumerate
+Implement RB-Trees insert
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Insertions in a RB Tree takes 
+\begin_inset Formula $O(lg(n))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+The following graph show the insertion of n elements to a RB Tree.
+ The curve is similar to the theoretical complexity.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename RBTree.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+RBTree.cpp
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Implement Disjoint Set Representation
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Weighted Union by Rank
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Weighted Union by Rank mixed with regular Find-Set operations takes 
+\begin_inset Formula $O(m+n\,lg(n))$
+\end_inset
+
+.
+ Where 
+\begin_inset Formula $m$
+\end_inset
+
+ are the number of operations and 
+\begin_inset Formula $n$
+\end_inset
+
+ the number of singletons.
+\end_layout
+
+\begin_layout Plain Layout
+The following graph represents the time taken to execute this mix of operations.
+ It resembles roughly to the complexity specified above.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename DSNoPathCompression.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+DisjointSet.cpp
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Union by Rank + Path Compression
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Union by Rank mixed with Find-Set with path compression operations takes
+ 
+\begin_inset Formula $O(m+n\,lg(n))$
+\end_inset
+
+.
+ Where 
+\begin_inset Formula $m$
+\end_inset
+
+ are the number of operations and 
+\begin_inset Formula $n$
+\end_inset
+
+ the number of singletons.
+\end_layout
+
+\begin_layout Plain Layout
+The following graph represents the time taken to execute this mix of operations.
+ This implementation gives a smaller execution time at end values and resembles
+ even better the theoretical time complexity.
+ The only downside is a highest complexity with small n's.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename DSPathCompression.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+DisjointSet.cpp
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Implement Kruskal
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Kruskal algorithm takes 
+\begin_inset Formula $O(E\:log(E))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+The following graph represents the time taken to execute this algorithm
+ in a randomly generated complete graph with 
+\begin_inset Formula $E$
+\end_inset
+
+ edges.
+ The implementation proves fully the theoretical time complexity of the
+ Kruskal algorithm.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Kruskal.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+Kruskal.cpp
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Implement Dijkstra
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Dijkstra algorithm takes 
+\begin_inset Formula $O(E+V\:lg(V))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+The following graph represents the time taken to execute this algorithm
+ in a randomly generated complete graph with 
+\begin_inset Formula $E$
+\end_inset
+
+ edges, only if the given alpha is bigger than generated alpha.
+ The implementation resembles the theoretical time complexity of the Dijkstra
+ algorithm.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Dijkstra.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+Dijkstra.cpp
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+From Cormen
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+21-3 (Tarjan's off-line least-common-ancestors algorithm)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Argue that line 10 executes exactly once for each pair.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Because when running on 
+\begin_inset Formula $v$
+\end_inset
+
+, 
+\begin_inset Formula $u$
+\end_inset
+
+ isn't BLACK, so it won't execute the print.
+ When we now execute on 
+\begin_inset Formula $u$
+\end_inset
+
+, 
+\begin_inset Formula $v$
+\end_inset
+
+ was set BLACK previously, and the print will be executed.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Argue that at the time of the call LCA(
+\begin_inset Formula $u$
+\end_inset
+
+), the number of sets in the disjoint-set data structure equal the depth
+ of 
+\begin_inset Formula $u$
+\end_inset
+
+ in 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+At the start of LCA, 
+\begin_inset Formula $u$
+\end_inset
+
+ has a depth 
+\begin_inset Formula $d$
+\end_inset
+
+, and there are 
+\begin_inset Formula $d$
+\end_inset
+
+ items.
+ At the start of LCA, it increases to 
+\begin_inset Formula $d+1$
+\end_inset
+
+ disjoints sets.
+ When calling again LCA, 
+\begin_inset Formula $d+1$
+\end_inset
+
+ is the depth of 
+\begin_inset Formula $v$
+\end_inset
+
+ (Inside making another set, and a union, leaving the number of sets as
+ 
+\begin_inset Formula $d+1$
+\end_inset
+
+).
+ The depth calculation holds for any run of LCA.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Prove that LCA correctly prints the least common ancestor of 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ for each pair.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Because when running on 
+\begin_inset Formula $v$
+\end_inset
+
+, all of it's ancestors will point to the LCA.
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ now will start the same process, but when it finds a BLACK node, it means
+ we must return that node's ancestor (
+\begin_inset Formula $w$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Analyze the running time of LCA, assuming that we use the implementation
+ of the disjoint-set data structure.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Most lines takes constant time.
+\end_layout
+
+\begin_layout Plain Layout
+The first for loop takes 
+\begin_inset Formula $\mathcal{O}(\left|T\right|\alpha\left|T\right|)$
+\end_inset
+
+, and the second takes 
+\begin_inset Formula $\mathcal{O}(\left|P\right|)$
+\end_inset
+
+.
+ Making the total 
+\begin_inset Formula $\mathcal{O}(\left|T\right|\alpha\left|T\right|+\left|P\right|)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+23-4 (Alternative minimum-spanning-tree algorithms)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+MAYBE-MST-A(G, w)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The algorithm returns a MST, because it never removes an edge that must
+ be in the MST.
+ An edge 
+\begin_inset Formula $e$
+\end_inset
+
+ it's only removed if it takes weight off and serves only as a bridge.
+\end_layout
+
+\begin_layout Plain Layout
+First, the edges are sorted in 
+\begin_inset Formula $\mathcal{O}(E\:lg(E))$
+\end_inset
+
+.
+ To check if 
+\begin_inset Formula $e$
+\end_inset
+
+ is a bridge, a DFS is executed in 
+\begin_inset Formula $\mathcal{O}(V+E)$
+\end_inset
+
+.
+ Giving a general total time of 
+\begin_inset Formula $\mathcal{O}(E^{2})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+MAYBE-MST-B(G, w)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The algorithm doesn't return a MST, because it can take the edges in such
+ an order that all the lightest edges between two vertex serve only as a
+ bridge (Making a cycle), so those wouldn't be taken into account.
+\end_layout
+
+\begin_layout Plain Layout
+Using disjoint sets to store the connected nodes.
+ If an union within the same subset is made, a cycle would be created.
+ This need 
+\begin_inset Formula $V$
+\end_inset
+
+ calls to Make-set and 
+\begin_inset Formula $E$
+\end_inset
+
+ call to both find and union, giving 
+\begin_inset Formula $\mathcal{O}(V\alpha E)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+MAYBE-MST-C(G, w)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The algorithm returns a MST, because if adding an edge that results in a
+ cycle, a deletion of the heaviest edge in the cycle is made, to keep the
+ characteristics of the MST.
+\end_layout
+
+\begin_layout Plain Layout
+Taking the previous answer, we just need to add a method to find the maximum
+ weight edge on a cycle.
+ Using a DFS to find the cycle and max edge could be implemented.
+ Giving a running time of 
+\begin_inset Formula $\mathcal{O}(VE)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bigbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+24-3 (Arbitrage)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Give an algorithm to determine if a sequence exists.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+By negation the logarithm of each entry in the conversion table, and applying
+ Bellman Ford to look for negative cycles.
+ if the algorithm return true, this means there exists a sequence.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Give an algorithm to print such sequence if exists.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+smallbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Executing relaxation 
+\begin_inset Formula $V-1$
+\end_inset
+
+ times like Bellman Ford and storing the 
+\begin_inset Formula $d$
+\end_inset
+
+ values of each node.
+ Executing the relaxation 
+\begin_inset Formula $V$
+\end_inset
+
+ more times and looking for the nodes that decreased in value.
+ After that, using Disjoint Sets we can determine the exacts steps of the
+ cycle.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+medbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

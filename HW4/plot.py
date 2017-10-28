@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 x = []
 y = []
-path = "RBTreeResults.txt"
+path = "DisjointCompressionResults.txt"
 
 with open(path, 'r') as f:
     for line in f:
@@ -16,7 +16,7 @@ print(y)
 plt.plot(x, y, label = "Time Complexity")
 plt.xlabel("n")
 plt.ylabel("Time")
-plt.title("RBTree")
+plt.title("DS with path compression")
 plt.grid(True)
 plt.legend()
 plt.show()

@@ -24,6 +24,9 @@
         "thread": "cpp",
         "tuple": "cpp",
         "valarray": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "limits": "cpp",
+        "typeinfo": "cpp",
+        "utility": "cpp"
     }
 }
