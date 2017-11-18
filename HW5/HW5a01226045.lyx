@@ -125,12 +125,38 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
+Dijkstra algorithm takes 
+\begin_inset Formula $O(E+V\:lg(V))$
+\end_inset
 
-\series bold
-\begin_inset Formula $ $
+.
+\end_layout
+
+\begin_layout Plain Layout
+The following graph represents the time taken to execute this algorithm
+ in a randomly generated complete graph with 
+\begin_inset Formula $E$
+\end_inset
+
+ edges, only if the given alpha is bigger than generated alpha.
+ The implementation resembles the theoretical time complexity of the Dijkstra
+ algorithm after the increase of size.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Dijkstra.png
+	scale 40
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+Dijkstra.cpp
 \end_layout
 
 \end_inset
@@ -152,7 +178,7 @@ bigbreak
 \end_layout
 
 \begin_layout Enumerate
-Implement Bellman-Ford Algoritm
+Implement Bellman-Ford Algorithm
 \begin_inset ERT
 status open
 
@@ -185,12 +211,38 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
+Bellman-Ford algorithm takes 
+\begin_inset Formula $O(V\:lg(V))$
+\end_inset
 
-\series bold
-\begin_inset Formula $ $
+.
+\end_layout
+
+\begin_layout Plain Layout
+The following graph represents the time taken to execute this algorithm
+ in a randomly generated complete graph with 
+\begin_inset Formula $V$
+\end_inset
+
+ vertices, as before, only if the given alpha is bigger than generated alpha.
+ The implementation resembles the theoretical time complexity of the Bellman-For
+d algorithm after the increase of size.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Bellman.png
+	scale 40
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+Bellman.cpp
 \end_layout
 
 \end_inset
@@ -245,10 +297,28 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
+The following graph represents the time taken to execute this algorithm
+ in a randomly generated matrix NxN.
+ Two lines, one for a single thread multiplication, and the other one for
+ a multi thread multiplication of the same matrix.
+ The implementation behaves as expected, and a multi threaded operations
+ is executed faster.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename MM.png
+	scale 40
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+ParallelMM.cpp
 \end_layout
 
 \end_inset
@@ -303,10 +373,48 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
+After the execution of the Graham Scan with 1000 points, the results were
+ successful.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Graham1000.png
+	scale 40
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+Graham scan algorithm takes 
+\begin_inset Formula $O(V\:lg(V))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+The following graph represents the time taken to execute this algorithm
+ with randomly generated points.
+ The implementation behaves as expected.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Graham.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The code used is annexed in 
+\series bold
+ParallelMM.cpp
 \end_layout
 
 \end_inset
@@ -593,7 +701,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-Given two sets, the problem can be veryfied by comparing the two total sums.
+Given two sets, the problem can be verified by comparing the two total sums.
 \end_layout
 
 \begin_layout Plain Layout
@@ -605,7 +713,7 @@ Being
 \begin_inset Formula $sum$
 \end_inset
 
- the total sum of elemnts in 
+ the total sum of elements in 
 \begin_inset Formula $X$
 \end_inset
 
@@ -629,7 +737,7 @@ If the configuration
 \begin_inset Formula $(X,target)$
 \end_inset
 
- is acceted in SUBSET-SUM, SUBSET-PARTITION must accept 
+ is accepted in SUBSET-SUM, SUBSET-PARTITION must accept 
 \begin_inset Formula $X'$
 \end_inset
 
@@ -750,11 +858,11 @@ Two graphs
 OUTPUT: 
 \series default
 Two sets of nodes 
-\begin_inset Formula $V′_{1}⊆V_{1}$
+\begin_inset Formula $V\text{′}\acute{}_{1}⊆V_{1}$
 \end_inset
 
  and 
-\begin_inset Formula $V′_{1}⊆V_{1}$
+\begin_inset Formula $V′\acute{}_{2}⊆V_{2}$
 \end_inset
 
  whose deletion leaves at least 
@@ -799,10 +907,12 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
+1.- Prove that two-graphs problem is NP:
+\end_layout
 
-
+\begin_layout Plain Layout
+Given two sets to remove, the configuration can be proven if the remaining
+ nodes in a graph can each be mapped to the other one.
 \end_layout
 
 \end_inset

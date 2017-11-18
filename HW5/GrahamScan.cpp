@@ -122,10 +122,10 @@ int main() {
 
     int toG = 1000;
 
-    for(int i = 10; i <= 1000; i++) {
+    for(int i = 10; i <= 2000; i++) {
         random_device rd;
         mt19937 gen(rd());
-        uniform_int_distribution<> dis(0, 1000);
+        uniform_int_distribution<> dis(0, 5000);
         
         Point points[i];
         for(int j = 0; j < i; j++) {
